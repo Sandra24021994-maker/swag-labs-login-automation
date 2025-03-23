@@ -32,7 +32,7 @@ npx wdio run wdio.conf.js
  
 Test Scenarios Covered
 - Successful login with valid credentials
-- Error messages for invalid username/password
+- Error messages for invalid username/password or both
 - Empty fields validation
 - Case sensitivity checks
 
