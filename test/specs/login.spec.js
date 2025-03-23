@@ -1,4 +1,4 @@
-// region Pageobjects
+//region Pageobjects
 const LoginPage = require('../pageobjects/login.page.js'); // Import LoginPage 
 const ErrorMessages = require('../pageobjects/errorMessages.js'); // Import Error Messages
 const credentials = require('../pageobjects/loginCredentials.js'); // Import login credentials
