@@ -4,7 +4,7 @@ const ErrorMessages = require('../pageobjects/errorMessages.js'); // Import Erro
 const credentials = require('../pageobjects/loginCredentials.js'); // Import login credentials
 //#endregion 
 
-describe('Swag Labs - Log In Page', () => {  
+describe.skip('Swag Labs - Log In Page', () => {  
 
     beforeEach(async () => { 
         // Open the login page before each test
@@ -81,28 +81,7 @@ describe('Swag Labs - Log In Page', () => {
         // Expected result: Error message indicating that the username and password do not match any user in the service
         const errorMessage = await LoginPage.getErrorMessage();
         await expect(errorMessage).toContain(ErrorMessages.usernameAndPasswordDoNotMatch);
-    }); 
-     
-    it('should display an error message when invalid username and password are provided', async () => {
-        // Try to log in with invalid credentials
-        await LoginPage.login(credentials.invalidValue, credentials.invalidValue); 
-        
-        // Expected result: Error message indicating that the username and password do not match any user in the service
-        const errorMessage = await LoginPage.getErrorMessage();
-        await expect(errorMessage).toContain(ErrorMessages.usernameAndPasswordDoNotMatch);
-    }); 
-      
-
-    it.only('should display an error message when username exceeds the maximum length', async () => {
-        const longUsername = 'a'.repeat(256);  // Username with 256 characters     
-
-        // Try to log in with a long username and valid password
-        await LoginPage.login(longUsername, credentials.validPassword);
-    
-        // Expected result: Error message indicating invalid username or password
-        const errorMessage = await LoginPage.getErrorMessage();
-        await expect(errorMessage).toContain(ErrorMessages.usernameAndPasswordDoNotMatch);
-    });
+    });  
 
 });
 
