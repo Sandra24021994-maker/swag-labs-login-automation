@@ -3,7 +3,7 @@
 
  
 Project Structure
-- `/test/` → Contains test cases
+- `/test/` → Contains test cases (two diffferent solutions are provided (login.spec.js file and login2.spec.js)
 - `/pageobjects/` → Page Object Model (POM) for login functionality
 - `loginCredentials.js` → Contains test data (valid and invalid credentials)
 - `errorMessages.js` → Stores expected error messages
@@ -32,7 +32,7 @@ npx wdio run wdio.conf.js
  
 Test Scenarios Covered
 - Successful login with valid credentials
-- Error messages for invalid username/password
+- Error messages for invalid username/password or both
 - Empty fields validation
 - Case sensitivity checks
 
