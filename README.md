@@ -43,9 +43,9 @@ Technologies Used
 - Mocha/Chai – Test framework & assertions
 
  
-Author
-Sandra Kamdžijaš 
-QA Automation Engineer
+Author:
+- Sandra Kamdžijaš 
+- QA Automation Engineer
 
 
 
