@@ -4,7 +4,7 @@ const ErrorMessages = require('../pageobjects/loginErrorMessages.js'); // Import
 const credentials = require('../pageobjects/loginCredentials.js'); // Import login credentials
 //#endregion 
 
-describe('Swag Labs - Log In Page', () => {   
+describe('Swag Labs - Login Page', () => {   
 
     beforeEach(async () => { 
         // Open the login page before each test
