@@ -16,7 +16,7 @@ describe('Swag Labs - Login Page', () => {
         // Perform login with provided username and password
         await LoginPage.login(username, password);
 
-        // TC1 Expected result: User should be redirected to the inventory page
+        // Expected result: User should be redirected to the inventory page
         const pageUrl = await browser.getUrl();
         await expect(pageUrl).toContain('/inventory.html'); 
     };  
@@ -49,7 +49,7 @@ describe('Swag Labs - Login Page', () => {
     };
 
     //region Test for successful login (with valid credentials)
-    it('TC1: should log in successfully with valid credentials', async () => { 
+    it('should log in successfully with valid credentials', async () => { 
         await successfulLogin(credentials.validUsername, credentials.validPassword);
     });  
     //#endregion
