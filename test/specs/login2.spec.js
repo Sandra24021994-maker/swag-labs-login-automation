@@ -1,6 +1,6 @@
 //region Pageobjects
-const LoginPage = require('../pageobjects/login.page.js'); // Import LoginPage 
-const ErrorMessages = require('../pageobjects/errorMessages.js'); // Import Error Messages
+const LoginPage = require('../pageobjects/login.page.js'); // Import login page 
+const ErrorMessages = require('../pageobjects/loginErrorMessages.js'); // Import login error messages
 const credentials = require('../pageobjects/loginCredentials.js'); // Import login credentials
 //#endregion 
 
@@ -29,17 +29,17 @@ describe('Swag Labs - Log In Page', () => {
         // Switch case to handle different test case error messages
         switch (tc) {
             case 2: case 3: case 7: case 8: case 9:
-                // Expected result: Error message indicating username and password do not match any user in the service
+                // Expected result: Displayed error message indicating username and password do not match any user in the service
                 await expect(errorMessage).toContain(ErrorMessages.usernameAndPasswordDoNotMatch);
                 break;
 
             case 4: case 6:
-                // Expected result: Error message indicating the username field is required
+                // Expected result: Displayed error message indicating the username field is required
                 await expect(errorMessage).toContain(ErrorMessages.usernameRequired);
                 break;
 
             case 5:
-                // Expected result: Error message indicating the password field is required
+                // Expected result: Displayed error message indicating the password field is required
                 await expect(errorMessage).toContain(ErrorMessages.passwordRequired);
                 break;
 
@@ -66,7 +66,7 @@ describe('Swag Labs - Log In Page', () => {
         { tc: 5, username: credentials.validUsername, password: credentials.emptyValue }, 
         // TC6: Username and password not provided at all
         { tc: 6, username: credentials.emptyValue, password: credentials.emptyValue }, 
-        // TC7: Provided invalid case-sensitive username and valid password
+        // TC7: Provided invalid (case-sensitive) username and valid password
         { tc: 7, username: credentials.invalidUsernameCaseSensitive, password: credentials.validPassword }, 
         // TC8: Provided valid username and invalid password (case-sensitive)
         { tc: 8, username: credentials.validUsername, password: credentials.invalidPasswordCaseSensitive }, 

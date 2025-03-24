@@ -1,4 +1,3 @@
-// pageobjects/Page.js
 class Page {
     /**
      * Opens a sub page of the page

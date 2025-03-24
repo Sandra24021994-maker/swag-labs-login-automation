@@ -2,12 +2,12 @@ const Page = require('./Page');
 
 class LoginPage extends Page {  
       
-    // Open the Log In page
+    // Open the Login page
     async open() {
         return super.open('');  
     } 
 
-    //#region Locators  
+    //region Locators  
     // Username field
     get usernameField() { return $('#user-name'); }
     // Password field
