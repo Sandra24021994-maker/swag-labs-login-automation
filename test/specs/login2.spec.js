@@ -48,7 +48,7 @@ describe('Swag Labs - Login Page', () => {
         }
     };
 
-    //region Test for successful login (with valid credentials)
+    //region Test for successful login (with valid credentials) - TC1
     it('should log in successfully with valid credentials', async () => { 
         await successfulLogin(credentials.validUsername, credentials.validPassword);
     });  
@@ -74,7 +74,7 @@ describe('Swag Labs - Login Page', () => {
         { tc: 9, username: credentials.invalidValue, password: credentials.invalidValue },
     ];
 
-    // Run all negative tests
+    //Run all negative tests - TC2-TC9
     for (const { tc, username, password } of negativeTests) {
         it(`TC${tc}: should display an error message for invalid login attempt`, async () => {
             await unsuccessfulLogin(tc, username, password);
