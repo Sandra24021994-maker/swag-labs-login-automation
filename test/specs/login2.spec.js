@@ -74,7 +74,7 @@ describe('Swag Labs - Login Page', () => {
         { tc: 9, username: credentials.invalidValue, password: credentials.invalidValue },
     ];
 
-    //Run all negative tests - TC2-TC9
+    // Run all negative tests - TC2-TC9
     for (const { tc, username, password } of negativeTests) {
         it(`TC${tc}: should display an error message for invalid login attempt`, async () => {
             await unsuccessfulLogin(tc, username, password);
